@@ -1,2 +1,10 @@
 # Secure-and-Private-AI
-Learning different Privacy Techniques in Deep Learning
+Learning Different Privacy Techniques in Deep Learning using Python
+
+### Lesson 1
+
+`` torch Library is the part of python packages ''
+
+### Functions Used  
+
+
