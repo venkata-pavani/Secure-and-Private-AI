@@ -48,3 +48,18 @@ loss = criterion(logits, labels) **_calculating loss through logits_**
 **For Negative Log Likelihood we use _nn.LogSoftmax_**.  **nn.LogSoftmax** gives us the **actual probabilites** in a model by taking exponential values
 1. dim = 0 ( calculates softmax across rows ) 
 2. dim = 1 ( calculates softmax across columns where each row sums to 1) In our example of MNIST each row is one of our examples so we make sure that we calculate our loss in each of the examples
+
+### How to perform **BACKPROPOGATION** automatically?
+
+# AUTOGRAD
+
+1. Pytorch **keeps track** of all operations you do on tensors
+2. requires_grad = "Yes" --> Tells pytorch to keep track of all operations of that particular tensor on which you enabled it
+3. tensor_name.**grad_fn** gives the type of function implemented on tensor
+4. **torch.set_grad_enabled**(True|False) for the global setting of gradients enabling or disabling
+
+## How to implement and how its useful?
+
+Loss depends on weights and bias parameters we do Forward pass to calculate it then with the loss we do backward pass and obtain gradients for our weights. With these gradients we do gradient descent step.
+
+We have to update these weights after every step of backward pass because you do these steps multiple times (epochs)  . **How ?**
