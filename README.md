@@ -37,3 +37,10 @@ Then we do a forward pass and get the loss and then do backward pass to get grad
 ### Losses in Pytorch
 ##### Cross Entrophy Loss
 **nn.CrossEntrophyLoss()**
+
+criterion = nn.CrossEntropyLoss()
+### Forward pass, get our logits
+logits = model(images)
+
+**For Negative Log Likelihood we use _nn.LogSoftmax_**. 
+dim = 0 ( calculates softmax across rows ) and dim = 1 ( calculates softmax across columns )
