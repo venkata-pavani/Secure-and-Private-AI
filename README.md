@@ -36,9 +36,8 @@ Gradient points to direction of fastest chage and maximizes the loss
 Through forward pass we calculate the loss and then we pass that backward again and then get the gradient for weights and update these weights.
 Then we do a forward pass and get the loss and then do backward pass to get gradients for weights and update these weights and so on..
 
-### Losses in Pytorch
-##### Cross Entrophy Loss
-**nn.CrossEntrophyLoss()**
+## Losses in Pytorch 
+##### Cross Entrophy Loss : **nn.CrossEntrophyLoss()**
 
 criterion = nn.CrossEntropyLoss()
 logits = model(images)  **_We get logits from the model_**
@@ -51,15 +50,17 @@ loss = criterion(logits, labels) **_calculating loss through logits_**
 
 ### How to perform **BACKPROPOGATION** automatically?
 
-# AUTOGRAD
+## AUTOGRAD
 
 1. Pytorch **keeps track** of all operations you do on tensors
 2. requires_grad = "Yes" --> Tells pytorch to keep track of all operations of that particular tensor on which you enabled it
 3. tensor_name.**grad_fn** gives the type of function implemented on tensor
 4. **torch.set_grad_enabled**(True|False) for the global setting of gradients enabling or disabling
 
-## How to implement and how its useful?
+### How to implement and how its useful?
 
 Loss depends on weights and bias parameters we do Forward pass to calculate it then with the loss we do backward pass and obtain gradients for our weights. With these gradients we do gradient descent step.
 
 We have to update these weights after every step of backward pass because you do these steps multiple times (epochs)  . **How ?**
+
+1. **OPTIMIZERS**  --> from torch import **optim** --> optim.SGD() / optim.Adam() etc.,
