@@ -24,9 +24,9 @@ In MNIST dataset we pass images through Neural Network and enable it to predict 
 
 Goal: Minimize the Loss so as to make better prediction of numbers better (i.e, maximizing the propbability)
 
-How?
+### *How?*
 
-We adjust these network parameters and minimize the loss which is done by using **Gradient Descent**. We have to minimize this gradient so as to minimize the **loss
+We adjust these network parameters and minimize the loss which is done by using **Gradient Descent**. We have to minimize this gradient so as to minimize the **loss**
 
 ## BackPropogation
 
