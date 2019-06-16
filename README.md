@@ -33,17 +33,17 @@ Gradient points to direction of fastest chage and maximizes the loss
 
 ## BackPropogation
 
-Through forward pass we calculate the loss and then we pass that backward again and then get the gradient for weights and update these weights.
-Then we do a forward pass and get the loss and then do backward pass to get gradients for weights and update these weights and so on..
+Forward Pass for calculating **LOSS**
+Backward pass for calculating **Gradient Descent**
+These steps are done MULTIPLE TIMES
 
 ## Losses in Pytorch 
 ##### Cross Entrophy Loss : **nn.CrossEntrophyLoss()**
 
-criterion = nn.CrossEntropyLoss()
+```criterion = nn.CrossEntropyLoss()
 logits = model(images)  **_We get logits from the model_**
 loss = criterion(logits, labels) **_calculating loss through logits_**
-
-
+```
 **For Negative Log Likelihood we use _nn.LogSoftmax_**.  **nn.LogSoftmax** gives us the **actual probabilites** in a model by taking exponential values
 1. dim = 0 ( calculates softmax across rows ) 
 2. dim = 1 ( calculates softmax across columns where each row sums to 1) In our example of MNIST each row is one of our examples so we make sure that we calculate our loss in each of the examples
@@ -64,3 +64,4 @@ Loss depends on weights and bias parameters we do Forward pass to calculate it t
 We have to update these weights after every step of backward pass because you do these steps multiple times (epochs)  . **How ?**
 
 1. **OPTIMIZERS**  --> from torch import **optim** --> optim.SGD() / optim.Adam() etc.,
+2. **optimizer.zero_grad()** --> cleans all gradients
