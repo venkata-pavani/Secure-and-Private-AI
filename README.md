@@ -29,6 +29,8 @@ Goal: Minimize the Loss so as to make better prediction of numbers better (i.e, 
 We adjust these network parameters and minimize the loss which is done by using **Gradient Descent**. 
 Gradient points to direction of fastest chage and maximizes the loss
 
+[[image](https://user-images.githubusercontent.com/12963112/59560187-6f519600-8fd3-11e9-82b0-fa121df959d9.png](url)
+
 ## BackPropogation
 
 Through forward pass we calculate the loss and then we pass that backward again and then get the gradient for weights and update these weights.
