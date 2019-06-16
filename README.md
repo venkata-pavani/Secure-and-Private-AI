@@ -1,4 +1,5 @@
 # Secure-and-Private-AI
+## NOTES
 Learning Different Privacy Techniques in Deep Learning using Python
 
 ### Lesson 1
@@ -66,7 +67,7 @@ We have to update these weights after every step of backward pass because you do
 1. **OPTIMIZERS**  --> from torch import **optim** --> optim.SGD() / optim.Adam() etc.,
 2. **optimizer.zero_grad()** --> cleans all gradients
 
-### Steps to implement loss,backward/fwd pass,autograd etc.,
+### Steps to implement loss,backward/fwd pass,autograd etc in a Program
 
 1. Craeye Model, Intilatize criterion using Loss and optimizer
 2. Run a forloop with epochs in which you flatten your images
