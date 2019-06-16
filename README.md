@@ -36,4 +36,4 @@ Then we do a forward pass and get the loss and then do backward pass to get grad
 
 ### Losses in Pytorch
 ##### Cross Entrophy Loss
-**nn.CrossEntrophyLoss()
+**nn.CrossEntrophyLoss()**
