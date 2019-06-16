@@ -16,3 +16,19 @@ Learning Different Privacy Techniques in Deep Learning using Python
 7. k.view -- returns a new tensor with same data of k and size (a,b)
 8. torch.from_numpy(vector_name) -- converts numpy array into torch
 
+## Learning Gradient Descent, Forward Propogation, BackPropogation
+
+In MNIST dataset we pass images through Neural Network and enable it to predict images with higher probability
+
+## GradientDescent
+
+Goal: Minimize the Loss so as to make better prediction of numbers better (i.e, maximizing the propbability)
+
+How?
+
+We adjust these network parameters and minimize the loss which is done by using **Gradient Descent**. We have to minimize this gradient so as to minimize the **loss
+
+## BackPropogation
+
+
+
