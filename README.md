@@ -42,5 +42,5 @@ criterion = nn.CrossEntropyLoss()
 ### Forward pass, get our logits
 logits = model(images)
 
-**For Negative Log Likelihood we use _nn.LogSoftmax_**. 
-dim = 0 ( calculates softmax across rows ) and dim = 1 ( calculates softmax across columns )
+**For Negative Log Likelihood we use _nn.LogSoftmax_**.  nn.LogSoftmax gives us the actual probabilites in a model by taking exponential values
+1. dim = 0 ( calculates softmax across rows ) 2. dim = 1 ( calculates softmax across columns )
