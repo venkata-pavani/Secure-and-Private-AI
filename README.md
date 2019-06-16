@@ -65,3 +65,12 @@ We have to update these weights after every step of backward pass because you do
 
 1. **OPTIMIZERS**  --> from torch import **optim** --> optim.SGD() / optim.Adam() etc.,
 2. **optimizer.zero_grad()** --> cleans all gradients
+
+### Steps to implement loss,backward/fwd pass,autograd etc.,
+
+1. Craeye Model, Intilatize criterion using Loss and optimizer
+2. Run a forloop with epochs in which you flatten your images
+3. Inthat set optimizer gradients to zero at the start of each loop (for updating new gradients)
+4. Calculate logits/logps and pass them in criterion function to calculate loss
+5. Now do optimizer.step() for updating new gradients calulated
+
