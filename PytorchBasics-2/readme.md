@@ -27,4 +27,5 @@ for e in range(epoch):
   ```
  2. Inference 
  
- Build a model using trained data and test it on the test data (see whther it overfits or underfits)
+ a. Build a model using trained data and test it on the test data (see whther it overfits or underfits)
+ b. Use **Regularization** if it overfits/underfits
