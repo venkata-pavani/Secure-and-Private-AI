@@ -24,16 +24,16 @@ Goal: Minimize the Loss so as to make better prediction of numbers better (i.e, 
 
 ### *How?*
 
-We adjust these network parameters and minimize the loss which is done by using **Gradient Descent**. 
+We adjust these **network parameters** and minimize the loss which is done by using **Gradient Descent**. 
 Gradient points to direction of fastest chage and maximizes the loss
 
 ![image](https://user-images.githubusercontent.com/12963112/59560201-a627ac00-8fd3-11e9-9f37-8adc152acc50.png)
 
 ## BackPropogation
 
-Forward Pass for calculating **LOSS**
-Backward pass for calculating **Gradient Descent**
-These steps are done MULTIPLE TIMES
+1. Forward Pass for calculating **LOSS**
+2. Backward pass for calculating **Gradient Descent**
+3. These steps are done MULTIPLE TIMES
 
 ## Losses in Pytorch 
 ##### Cross Entrophy Loss : **nn.CrossEntrophyLoss()**
@@ -43,10 +43,10 @@ logits = model(images)  **_We get logits from the model_**
 loss = criterion(logits, labels) **_calculating loss through logits_**
 ```
 **For Negative Log Likelihood we use _nn.LogSoftmax_**.  **nn.LogSoftmax** gives us the **actual probabilites** in a model by taking exponential values
-1. dim = 0 ( calculates softmax across rows ) 
-2. dim = 1 ( calculates softmax across columns where each row sums to 1) In our example of MNIST each row is one of our examples so we make sure that we calculate our loss in each of the examples
+''' 1. dim = 0 ( calculates softmax across rows ) 
+''' 2. dim = 1 ( calculates softmax across columns where each row sums to 1) In our example of MNIST each row is one of our examples so we make sure that we calculate our loss in each of the examples
 
-### How to perform **BACKPROPOGATION** automatically?
+## How to perform **BACKPROPOGATION** automatically?
 
 ## AUTOGRAD
 
@@ -57,7 +57,8 @@ loss = criterion(logits, labels) **_calculating loss through logits_**
 
 ### How to implement and how its useful?
 
-Loss depends on weights and bias parameters we do Forward pass to calculate it then with the loss we do backward pass and obtain gradients for our weights. With these gradients we do gradient descent step.
+1. Loss depends on **weights** and **bias** parameters 
+2. we do Forward pass to calculate **loss** then with the loss we do backward pass and obtain **gradients** for our weights. With these gradients we do gradient descent step.
 
 We have to update these weights after every step of backward pass because you do these steps multiple times (epochs)  . **How ?**
 
