@@ -27,5 +27,13 @@ for e in range(epoch):
   ```
  2. Inference 
  
- a. Build a model using trained data and test it on the test data (see whther it overfits or underfits)
- b. Use **Regularization** if it overfits/underfits
+ 1. Build a model using trained data and test it on the test data (see whther it overfits or underfits)
+ 2. Use **Regularization** if it overfits/underfits
+
+3. Goal of *Validation*
+
+Test the model on the data that is not part of Training Set
+
+How to test??
+1. Accuracy
+2. Precision and Recall
